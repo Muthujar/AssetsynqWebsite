@@ -1,32 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 
 export function FinalCTA() {
   return (
     <section className="relative overflow-hidden bg-brand-gradient py-16 sm:py-20">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.2) 0%, transparent 50%)",
-        }}
-      />
       <div className="section-container relative text-center">
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Ready to simplify your pawn shop?
+        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+          Ready to try AssetSynq?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/80">
-          Join shops across India moving from registers to a system built for
-          pledges, interest, and branch cash.
+        <p className="mx-auto mt-4 max-w-lg text-white/85">
+          Message us on WhatsApp. We will show you a demo and set up your shop
+          when you are ready.
         </p>
-        <Button
-          href="#contact"
-          variant="gold"
-          size="lg"
-          className="mt-8"
-        >
-          Book a demo
-        </Button>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button
+            href={whatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
+            variant="gold"
+            size="lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat on WhatsApp
+          </Button>
+          <Button
+            href="#contact"
+            variant="secondary"
+            size="lg"
+            className="border-white/30 bg-white/10 text-white hover:bg-white/20"
+          >
+            Send enquiry
+          </Button>
+        </div>
       </div>
     </section>
   );

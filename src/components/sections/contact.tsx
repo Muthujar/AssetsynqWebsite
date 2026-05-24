@@ -1,7 +1,14 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone, Clock, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  buildEnquiryWhatsAppMessage,
+  CONTACT,
+  DEFAULT_WHATSAPP_MESSAGE,
+  whatsappUrl,
+} from "@/lib/contact";
 
 const inputClass =
   "w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent focus:ring-2 focus:ring-accent/20";
@@ -11,6 +18,17 @@ export function Contact() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const message = buildEnquiryWhatsAppMessage({
+      name: String(formData.get("name") ?? ""),
+      business: String(formData.get("business") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      city: String(formData.get("city") ?? ""),
+      message: String(formData.get("message") ?? ""),
+    });
+    window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
     setSubmitted(true);
   }
 
@@ -22,24 +40,45 @@ export function Contact() {
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="section-heading">Get in touch</h2>
+            <h2 className="section-heading">Get started with us</h2>
             <p className="section-subheading">
-              Book a demo or ask about pricing and migration from your existing
-              books.
+              We set up your shop account for you — no self sign-up. Message us
+              on WhatsApp for the fastest response, or send an enquiry using the
+              form.
             </p>
+
+            <div className="mt-8">
+              <Button
+                href={whatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
+                variant="whatsapp"
+                size="lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" aria-hidden="true" />
+                Chat on WhatsApp
+              </Button>
+              <p className="mt-3 text-sm text-muted">
+                Preferred — demo, pricing, and account setup
+              </p>
+            </div>
+
             <ul className="mt-8 space-y-5">
               <li className="flex items-start gap-3">
-                <Mail
-                  className="mt-0.5 h-5 w-5 shrink-0 text-accent"
+                <MessageCircle
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#25D366]"
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-sm font-medium text-foreground">Email</p>
+                  <p className="text-sm font-medium text-foreground">WhatsApp</p>
                   <a
-                    href="mailto:YOUR_EMAIL@assetsynq.com"
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-muted transition-colors hover:text-accent"
                   >
-                    YOUR_EMAIL@assetsynq.com
+                    {CONTACT.phoneDisplay}
                   </a>
                 </div>
               </li>
@@ -49,14 +88,27 @@ export function Contact() {
                   aria-hidden="true"
                 />
                 <div>
-                  <p className="text-sm font-medium text-foreground">
-                    Phone / WhatsApp
-                  </p>
+                  <p className="text-sm font-medium text-foreground">Phone</p>
                   <a
-                    href="tel:+91XXXXXXXXXX"
+                    href={`tel:${CONTACT.phoneTel}`}
                     className="text-sm text-muted transition-colors hover:text-accent"
                   >
-                    +91 XXXXXXXXXX
+                    {CONTACT.phoneDisplay}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail
+                  className="mt-0.5 h-5 w-5 shrink-0 text-accent"
+                  aria-hidden="true"
+                />
+                <div>
+                  <p className="text-sm font-medium text-foreground">Email</p>
+                  <a
+                    href={`mailto:${CONTACT.email}`}
+                    className="text-sm text-muted transition-colors hover:text-accent"
+                  >
+                    {CONTACT.email}
                   </a>
                 </div>
               </li>
@@ -69,25 +121,43 @@ export function Contact() {
                   <p className="text-sm font-medium text-foreground">
                     Business hours
                   </p>
-                  <p className="text-sm text-muted">Mon–Sat, 9 AM – 6 PM IST</p>
+                  <p className="text-sm text-muted">{CONTACT.businessHours}</p>
                 </div>
               </li>
             </ul>
           </div>
 
           <div className="card rounded-2xl p-6 sm:p-8">
+            <h3 className="text-lg font-semibold text-foreground">
+              Enquiry form
+            </h3>
+            <p className="mt-1 text-sm text-muted">
+              Fill in your details — we&apos;ll open WhatsApp with your message
+              so our team can reply and arrange setup.
+            </p>
+
             {submitted ? (
-              <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
+              <div className="mt-8 flex min-h-[280px] flex-col items-center justify-center text-center">
                 <p className="text-lg font-semibold text-foreground">
-                  Thank you for reaching out!
+                  Thank you!
                 </p>
                 <p className="mt-2 max-w-sm text-sm text-muted">
-                  We&apos;ll get back to you shortly. For urgent queries, call
-                  or WhatsApp us directly.
+                  WhatsApp should have opened with your enquiry. Send the message
+                  there and we&apos;ll get back to you shortly.
                 </p>
+                <Button
+                  href={whatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
+                  variant="whatsapp"
+                  size="md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6"
+                >
+                  Open WhatsApp again
+                </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="mt-6 space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label
@@ -178,7 +248,7 @@ export function Contact() {
                   >
                     Message{" "}
                     <span className="font-normal text-muted">
-                      (optional: number of branches)
+                      (optional: branches, questions)
                     </span>
                   </label>
                   <textarea
@@ -192,7 +262,7 @@ export function Contact() {
                   type="submit"
                   className="w-full rounded-lg bg-brand-gradient px-5 py-3 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
-                  Send message
+                  Send enquiry via WhatsApp
                 </button>
               </form>
             )}

@@ -1,32 +1,53 @@
+import { formatInr, PRICING } from "@/lib/pricing";
+
 const faqs = [
   {
-    question: "Is AssetSynq only for gold loans?",
+    question: "What is pawn broker software?",
     answer:
-      "AssetSynq is built for pawn and gold-loan shops. It supports gold, silver, platinum, and mixed collateral schemes.",
+      "It is software to manage pawn and gold loans — customer details, pledged items, interest, payments, repledge, and reports. AssetSynq does all of this in one cloud-based app.",
   },
   {
-    question: "Can I run multiple branches?",
+    question: "Is AssetSynq suitable for small pawnshops?",
     answer:
-      "Yes. Each branch has its own code, cash tracking, and reports under one organization.",
+      "Yes. It is built for small and medium pawn shops, especially owners moving from register books for the first time. We help with setup and training.",
   },
   {
-    question: "How is interest calculated after due date?",
+    question: "Can AssetSynq manage gold loan interest?",
     answer:
-      "Simple interest applies until expiry. After expiry, loans move to Expired status and penal interest compounds monthly per your scheme rules.",
+      "Yes. You set your scheme rules. Simple interest runs until expiry. After due date, penal interest compounds monthly as per your settings.",
   },
   {
-    question: "Can I import old loans from Excel?",
+    question: "Does AssetSynq support repledge and part payments?",
     answer:
-      "Yes. Download the template, fill it from your books, and upload via bulk import (admin).",
+      "Yes. You can record part payments, track repledges to external stores, and manage auction items.",
   },
   {
-    question: "Is my data shared with other shops?",
+    question: "Is customer data secure?",
     answer:
-      "No. Each organization is isolated. Login requires your org code — no cross-org data leakage.",
+      "Yes. Each shop has a separate account. Your data is not shared with other shops. Login needs your org code, username, and password.",
+  },
+  {
+    question: "Can AssetSynq generate reports for audits?",
+    answer:
+      "Yes. Daily cash, overdue, and income reports are available. You can export to Excel when needed.",
+  },
+  {
+    question: "How do I sign up?",
+    answer:
+      "Contact us on WhatsApp or fill the enquiry form. We create and set up your shop account for you. There is no self sign-up on the website.",
+  },
+  {
+    question: "How much does it cost?",
+    answer: `${formatInr(PRICING.firstYear.offer)} for the first year (offer price, regular ${formatInr(PRICING.firstYear.list)}), then ${formatInr(PRICING.renewal.offer)}/year renewal (regular ${formatInr(PRICING.renewal.list)}). One branch included. Extra branch: ${formatInr(PRICING.extraBranch.offer)}/year. Unlimited users.`,
+  },
+  {
+    question: "Do I need to install software?",
+    answer:
+      "No. Open the app in your browser on PC or mobile. Your data stays in the cloud with regular backups.",
   },
   {
     question: "Do you support Tamil?",
-    answer: "Yes. Tamil and English UI are supported.",
+    answer: "Yes. Tamil and English are both supported.",
   },
 ];
 
@@ -35,7 +56,10 @@ export function FAQ() {
     <section id="faq" className="section-dark py-16 sm:py-20">
       <div className="section-container max-w-3xl">
         <div className="text-center">
-          <h2 className="section-heading">Frequently asked questions</h2>
+          <h2 className="section-heading">FAQs</h2>
+          <p className="section-subheading mx-auto">
+            Common questions from pawn shop owners.
+          </p>
         </div>
         <dl className="mt-10 divide-y divide-dark-border">
           {faqs.map(({ question, answer }) => (

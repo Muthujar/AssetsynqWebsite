@@ -5,10 +5,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LOGO } from "@/lib/brand";
+import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 
 const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#features", label: "Features" },
+  { href: "#benefits", label: "Benefits" },
   { href: "#pricing", label: "Pricing" },
   { href: "#contact", label: "Contact" },
 ];
@@ -87,8 +89,18 @@ export function Header() {
             >
               Login
             </Button>
-            <Button href="#contact" size="sm" onClick={closeMenu}>
-              Request a demo
+            <Button
+              href={whatsappUrl(DEFAULT_WHATSAPP_MESSAGE)}
+              variant="whatsapp"
+              size="sm"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+            >
+              WhatsApp
+            </Button>
+            <Button href="#contact" variant="secondary" size="sm" onClick={closeMenu}>
+              Enquire
             </Button>
           </div>
         </nav>

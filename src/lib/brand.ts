@@ -12,6 +12,11 @@ export const LOGO = {
     height: 80,
     className: "h-14 w-auto sm:h-16",
   },
+  heroShowcase: {
+    width: 420,
+    height: 100,
+    className: "h-16 w-auto sm:h-20 lg:h-24",
+  },
   footer: {
     width: 180,
     height: 44,

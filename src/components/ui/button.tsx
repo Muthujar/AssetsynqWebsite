@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "gold";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "gold" | "whatsapp";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -16,6 +16,8 @@ const variants: Record<ButtonVariant, string> = {
     "border border-border bg-surface text-foreground hover:border-accent/30 hover:bg-accent-light",
   ghost: "text-muted hover:bg-accent-light/60 hover:text-foreground",
   gold: "bg-gold text-foreground font-semibold shadow-md shadow-gold/25 hover:bg-gold-hover",
+  whatsapp:
+    "bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 hover:bg-[#20BD5A]",
 };
 
 const sizes: Record<ButtonSize, string> = {

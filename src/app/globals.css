@@ -7,12 +7,15 @@
   --border: #e2e8f0;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --accent: #ec4899;
-  --accent-end: #9333ea;
+  --accent: #eb008b;
+  --accent-end: #7021b1;
   --accent-light: #fdf2f8;
-  --accent-hover: #db2777;
-  --gold: #f5c518;
-  --gold-hover: #eab308;
+  --accent-hover: #c9007a;
+  --gold: #d4a853;
+  --gold-bright: #f5d76e;
+  --gold-dim: #9a7b2f;
+  --gold-hover: #c9a227;
+  --vault: #080b12;
   --dark: #12182b;
   --dark-elevated: #1a2340;
   --dark-border: #2a3555;
@@ -32,7 +35,9 @@
   --color-accent-light: var(--accent-light);
   --color-accent-hover: var(--accent-hover);
   --color-gold: var(--gold);
-  --color-gold-hover: var(--gold-hover);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-dim: var(--gold-dim);
+  --color-vault: var(--vault);
   --color-dark: var(--dark);
   --color-dark-elevated: var(--dark-elevated);
   --color-dark-border: var(--dark-border);
@@ -94,11 +99,12 @@ body {
 
 .bg-hero {
   background:
-    radial-gradient(ellipse 90% 70% at 50% -20%, rgba(236, 72, 153, 0.14) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(147, 51, 234, 0.1) 0%, transparent 45%),
-    radial-gradient(ellipse 40% 30% at 10% 20%, rgba(245, 197, 24, 0.06) 0%, transparent 40%),
+    radial-gradient(ellipse 70% 60% at 85% 20%, rgba(235, 0, 139, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(212, 168, 83, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% -10%, rgba(112, 33, 177, 0.08) 0%, transparent 45%),
     var(--background);
 }
+
 
 .site-header {
   @apply border-b border-border bg-surface shadow-sm;
@@ -134,6 +140,18 @@ body {
 }
 
 .icon-badge-dark {
-  @apply flex items-center justify-center rounded-lg text-accent;
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+  @apply flex items-center justify-center rounded-lg text-gold;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.15) 0%, rgba(154, 123, 47, 0.12) 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 50%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes vault-shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.85; }
 }

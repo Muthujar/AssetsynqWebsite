@@ -1,11 +1,13 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
+import { FeaturesGrid } from "@/components/sections/features-grid";
+import { WhyChoose } from "@/components/sections/why-choose";
+import { PlanIncluded } from "@/components/sections/plan-included";
 import { ProblemSolution } from "@/components/sections/problem-solution";
-import { Features } from "@/components/sections/features";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { WhoItsFor } from "@/components/sections/who-its-for";
 import { Pricing } from "@/components/sections/pricing";
+import { Benefits } from "@/components/sections/benefits";
 import { Contact } from "@/components/sections/contact";
 import { FAQ } from "@/components/sections/faq";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -22,11 +24,13 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
+        <FeaturesGrid />
+        <WhyChoose />
+        <PlanIncluded />
         <ProblemSolution />
-        <Features />
         <HowItWorks />
-        <WhoItsFor />
         <Pricing />
+        <Benefits />
         <Contact />
         <FAQ />
         <FinalCTA />

@@ -10,9 +10,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AssetSynq - Pawn Broking Management Software",
+  title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
   description:
-    "Cloud software for Indian pawn brokers and gold-loan shops. Manage pledges, interest, repledges, auctions, branch cash, and reports.",
+    "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
   metadataBase: new URL("https://assetsynq.com"),
   icons: {
     icon: "/favicon.png",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://assetsynq.com/",
-    title: "AssetSynq - Pawn Broking Management Software",
+    title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
     description:
-      "Cloud software for Indian pawn brokers and gold-loan shops. Manage pledges, interest, repledges, auctions, branch cash, and reports.",
+      "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
     locale: "en_IN",
     siteName: "AssetSynq",
     images: [
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AssetSynq - Pawn Broking Management Software",
+    title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
     description:
-      "Cloud software for Indian pawn brokers and gold-loan shops. Manage pledges, interest, repledges, auctions, branch cash, and reports.",
+      "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
     images: [LOGO.src],
   },
   alternates: {
