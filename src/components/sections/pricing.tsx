@@ -49,10 +49,12 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-16 sm:py-20">
+    <section id="pricing" className="section-dark py-16 sm:py-20">
       <div className="section-container">
         <div className="text-center">
-          <h2 className="section-heading">Simple, transparent pricing</h2>
+          <h2 className="section-heading">
+            Simple, <span className="text-gradient">transparent</span> pricing
+          </h2>
           <p className="section-subheading mx-auto">
             Plans that scale from one branch to many. Replace placeholder
             amounts before launch.
@@ -66,27 +68,27 @@ export function Pricing() {
               className={cn(
                 "relative flex flex-col rounded-2xl border p-8",
                 plan.highlighted
-                  ? "border-accent bg-surface shadow-lg shadow-accent/10 ring-1 ring-accent/20"
-                  : "border-border bg-surface",
+                  ? "border-accent/50 bg-dark-elevated shadow-lg shadow-accent/15 ring-1 ring-accent/25"
+                  : "card-dark",
               )}
             >
               {"badge" in plan && plan.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-white">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-3 py-1 text-xs font-medium text-white">
                   {plan.badge}
                 </span>
               )}
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-lg font-semibold text-dark-foreground">
                 {plan.name}
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-bold tracking-tight text-foreground">
+                <span className="text-4xl font-bold tracking-tight text-dark-foreground">
                   {plan.price}
                 </span>
                 {plan.period && (
-                  <span className="text-muted">{plan.period}</span>
+                  <span className="text-dark-muted">{plan.period}</span>
                 )}
               </div>
-              <p className="mt-3 text-sm text-muted">{plan.description}</p>
+              <p className="mt-3 text-sm text-dark-muted">{plan.description}</p>
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5">
@@ -94,7 +96,7 @@ export function Pricing() {
                       className="mt-0.5 h-4 w-4 shrink-0 text-accent"
                       aria-hidden="true"
                     />
-                    <span className="text-sm text-muted">{feature}</span>
+                    <span className="text-sm text-dark-muted">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -109,11 +111,11 @@ export function Pricing() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-muted">
+        <p className="mt-8 text-center text-sm text-dark-muted">
           All plans include secure cloud hosting and regular updates. GST as
           applicable.
         </p>
-        <p className="mt-2 text-center text-xs text-muted/70">
+        <p className="mt-2 text-center text-xs text-dark-muted/70">
           Pricing is indicative — replace with your actual plans before launch.
         </p>
       </div>

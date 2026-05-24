@@ -32,17 +32,17 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-16 sm:py-20">
+    <section id="faq" className="section-dark py-16 sm:py-20">
       <div className="section-container max-w-3xl">
         <div className="text-center">
           <h2 className="section-heading">Frequently asked questions</h2>
         </div>
-        <dl className="mt-10 divide-y divide-border">
+        <dl className="mt-10 divide-y divide-dark-border">
           {faqs.map(({ question, answer }) => (
             <div key={question} className="py-5">
               <dt>
                 <details className="group">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-medium text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-medium text-dark-foreground marker:content-none [&::-webkit-details-marker]:hidden">
                     {question}
                     <span
                       className="shrink-0 text-accent transition-transform group-open:rotate-45"
@@ -51,7 +51,7 @@ export function FAQ() {
                       +
                     </span>
                   </summary>
-                  <dd className="mt-3 text-sm leading-relaxed text-muted">
+                  <dd className="mt-3 text-sm leading-relaxed text-dark-muted">
                     {answer}
                   </dd>
                 </details>

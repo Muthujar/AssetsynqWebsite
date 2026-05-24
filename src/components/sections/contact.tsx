@@ -3,6 +3,9 @@
 import { useState, FormEvent } from "react";
 import { Mail, Phone, Clock } from "lucide-react";
 
+const inputClass =
+  "w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent focus:ring-2 focus:ring-accent/20";
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -12,7 +15,10 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="border-y border-border bg-surface py-16 sm:py-20">
+    <section
+      id="contact"
+      className="border-y border-border bg-surface py-16 sm:py-20"
+    >
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -31,7 +37,7 @@ export function Contact() {
                   <p className="text-sm font-medium text-foreground">Email</p>
                   <a
                     href="mailto:YOUR_EMAIL@assetsynq.com"
-                    className="text-sm text-muted hover:text-accent"
+                    className="text-sm text-muted transition-colors hover:text-accent"
                   >
                     YOUR_EMAIL@assetsynq.com
                   </a>
@@ -48,7 +54,7 @@ export function Contact() {
                   </p>
                   <a
                     href="tel:+91XXXXXXXXXX"
-                    className="text-sm text-muted hover:text-accent"
+                    className="text-sm text-muted transition-colors hover:text-accent"
                   >
                     +91 XXXXXXXXXX
                   </a>
@@ -56,7 +62,7 @@ export function Contact() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock
-                  className="mt-0.5 h-5 w-5 shrink-0 text-accent"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-gold"
                   aria-hidden="true"
                 />
                 <div>
@@ -69,7 +75,7 @@ export function Contact() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-border bg-background p-6 sm:p-8">
+          <div className="card rounded-2xl p-6 sm:p-8">
             {submitted ? (
               <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
                 <p className="text-lg font-semibold text-foreground">
@@ -96,7 +102,7 @@ export function Contact() {
                       type="text"
                       required
                       autoComplete="name"
-                      className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                      className={inputClass}
                     />
                   </div>
                   <div>
@@ -112,7 +118,7 @@ export function Contact() {
                       name="business"
                       type="text"
                       required
-                      className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                      className={inputClass}
                     />
                   </div>
                 </div>
@@ -130,7 +136,7 @@ export function Contact() {
                       type="tel"
                       required
                       autoComplete="tel"
-                      className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                      className={inputClass}
                     />
                   </div>
                   <div>
@@ -146,7 +152,7 @@ export function Contact() {
                       type="email"
                       required
                       autoComplete="email"
-                      className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                      className={inputClass}
                     />
                   </div>
                 </div>
@@ -162,7 +168,7 @@ export function Contact() {
                     name="city"
                     type="text"
                     required
-                    className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                    className={inputClass}
                   />
                 </div>
                 <div>
@@ -179,12 +185,12 @@ export function Contact() {
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full resize-y rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+                    className={`${inputClass} resize-y`}
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-accent px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="w-full rounded-lg bg-brand-gradient px-5 py-3 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   Send message
                 </button>

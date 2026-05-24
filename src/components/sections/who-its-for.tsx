@@ -35,11 +35,8 @@ export function WhoItsFor() {
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {audiences.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="rounded-xl border border-border bg-background p-6 text-center"
-            >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-light text-accent">
+            <div key={title} className="card p-6 text-center">
+              <div className="icon-badge mx-auto mb-4 h-12 w-12 rounded-full">
                 <Icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="font-semibold text-foreground">{title}</h3>

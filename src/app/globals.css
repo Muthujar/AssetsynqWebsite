@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1a1a1a;
+  --background: #f8f9fc;
+  --foreground: #1a2340;
   --muted: #64748b;
   --border: #e2e8f0;
-  --accent: #b45309;
-  --accent-light: #fef3c7;
-  --accent-hover: #92400e;
   --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --accent: #ec4899;
+  --accent-end: #9333ea;
+  --accent-light: #fdf2f8;
+  --accent-hover: #db2777;
+  --gold: #f5c518;
+  --gold-hover: #eab308;
+  --dark: #12182b;
+  --dark-elevated: #1a2340;
+  --dark-border: #2a3555;
+  --dark-foreground: #f0f2f8;
+  --dark-muted: #94a3b8;
 }
 
 @theme inline {
@@ -16,10 +25,19 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
   --color-accent: var(--accent);
+  --color-accent-end: var(--accent-end);
   --color-accent-light: var(--accent-light);
   --color-accent-hover: var(--accent-hover);
-  --color-surface: var(--surface);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-dark: var(--dark);
+  --color-dark-elevated: var(--dark-elevated);
+  --color-dark-border: var(--dark-border);
+  --color-dark-foreground: var(--dark-foreground);
+  --color-dark-muted: var(--dark-muted);
   --font-sans: var(--font-dm-sans);
 }
 
@@ -34,7 +52,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent-light);
+  background: rgba(236, 72, 153, 0.2);
   color: var(--foreground);
 }
 
@@ -48,4 +66,74 @@ body {
 
 .section-subheading {
   @apply mt-3 max-w-2xl text-lg text-muted;
+}
+
+.section-dark {
+  background: var(--dark);
+  color: var(--dark-foreground);
+}
+
+.section-dark .section-heading {
+  @apply text-dark-foreground;
+}
+
+.section-dark .section-subheading {
+  @apply text-dark-muted;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, #c084fc 55%, var(--accent-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 50%, var(--accent-end) 100%);
+}
+
+.bg-hero {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -20%, rgba(236, 72, 153, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 10%, rgba(147, 51, 234, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse 40% 30% at 10% 20%, rgba(245, 197, 24, 0.06) 0%, transparent 40%),
+    var(--background);
+}
+
+.site-header {
+  @apply border-b border-border bg-surface shadow-sm;
+}
+
+.site-header-scrolled {
+  @apply shadow-md;
+}
+
+.card {
+  @apply rounded-xl border border-border bg-surface transition-shadow;
+}
+
+.card:hover {
+  box-shadow:
+    0 0 0 1px rgba(236, 72, 153, 0.1),
+    0 4px 24px rgba(26, 35, 64, 0.06);
+}
+
+.card-dark {
+  @apply rounded-xl border border-dark-border bg-dark-elevated transition-shadow;
+}
+
+.card-dark:hover {
+  box-shadow:
+    0 0 0 1px rgba(236, 72, 153, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.icon-badge {
+  @apply flex items-center justify-center rounded-lg text-accent;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+}
+
+.icon-badge-dark {
+  @apply flex items-center justify-center rounded-lg text-accent;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
 }

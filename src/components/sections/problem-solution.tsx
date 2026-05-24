@@ -9,7 +9,7 @@ const problems = [
 
 export function ProblemSolution() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="section-dark py-16 sm:py-20">
       <div className="section-container">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -25,16 +25,17 @@ export function ProblemSolution() {
                     className="mt-0.5 h-5 w-5 shrink-0 text-red-400"
                     aria-hidden="true"
                   />
-                  <span className="text-muted">{item}</span>
+                  <span className="text-dark-muted">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-border bg-surface p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-              One system for the full pledge lifecycle
+          <div className="card-dark rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-dark-foreground">
+              One system for the{" "}
+              <span className="text-gradient">full pledge lifecycle</span>
             </h2>
-            <p className="mt-4 leading-relaxed text-muted">
+            <p className="mt-4 leading-relaxed text-dark-muted">
               AssetSynq digitizes the full pledge lifecycle with automated
               interest rules, reports, and role-based access per branch.
             </p>
@@ -50,7 +51,7 @@ export function ProblemSolution() {
                     className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                     aria-hidden="true"
                   />
-                  <span className="text-foreground">{item}</span>
+                  <span className="text-dark-foreground">{item}</span>
                 </li>
               ))}
             </ul>

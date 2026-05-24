@@ -90,10 +90,13 @@ const comingSoon = [
 
 export function Features() {
   return (
-    <section id="features" className="border-y border-border bg-surface py-16 sm:py-20">
+    <section id="features" className="bg-background py-16 sm:py-20">
       <div className="section-container">
         <div className="max-w-2xl">
-          <h2 className="section-heading">Everything your shop needs</h2>
+          <h2 className="section-heading">
+            Everything your shop{" "}
+            <span className="text-gradient">needs</span>
+          </h2>
           <p className="section-subheading">
             From first pledge to auction settlement — built around how Indian
             pawn and gold-loan businesses actually work.
@@ -102,11 +105,8 @@ export function Features() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, description }) => (
-            <article
-              key={title}
-              className="rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-md"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-light text-accent">
+            <article key={title} className="card p-6">
+              <div className="icon-badge mb-4 h-10 w-10">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 className="font-semibold text-foreground">{title}</h3>
@@ -118,7 +118,7 @@ export function Features() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-4 rounded-lg border border-dashed border-border bg-background px-5 py-4">
-          <span className="text-xs font-medium uppercase tracking-wide text-muted">
+          <span className="text-xs font-medium uppercase tracking-wide text-amber-700">
             Coming soon
           </span>
           {comingSoon.map(({ icon: Icon, label }) => (

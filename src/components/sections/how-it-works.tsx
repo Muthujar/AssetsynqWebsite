@@ -19,7 +19,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="section-dark py-16 sm:py-20">
       <div className="section-container">
         <div className="text-center">
           <h2 className="section-heading">How it works</h2>
@@ -30,11 +30,13 @@ export function HowItWorks() {
         <ol className="mt-12 grid gap-8 sm:grid-cols-3">
           {steps.map(({ step, title, description }) => (
             <li key={step} className="relative text-center">
-              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-lg font-bold text-white">
+              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-gradient text-lg font-bold text-white shadow-lg shadow-accent/30">
                 {step}
               </span>
-              <h3 className="mt-4 font-semibold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
+              <h3 className="mt-4 font-semibold text-dark-foreground">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-dark-muted">
                 {description}
               </p>
             </li>

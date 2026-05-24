@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { LOGO } from "@/lib/brand";
 
 const navLinks = [
   { href: "#top", label: "Home" },
@@ -36,25 +37,23 @@ export function Header() {
     <header
       id="top"
       className={cn(
-        "sticky top-0 z-50 border-b transition-colors",
-        scrolled
-          ? "border-border/80 bg-surface/95 shadow-sm backdrop-blur-md"
-          : "border-transparent bg-surface/80 backdrop-blur-sm",
+        "site-header sticky top-0 z-50 transition-shadow",
+        scrolled && "site-header-scrolled",
       )}
     >
       <div className="section-container flex h-16 items-center justify-between">
         <a
           href="#top"
-          className="flex items-center gap-2.5 font-semibold text-foreground"
-          aria-label="AssetSynq home"
+          className="flex shrink-0 items-center"
+          aria-label="AssetSynQ home"
         >
-          <span
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-xs font-bold text-white"
-            aria-hidden="true"
-          >
-            AS
-          </span>
-          <span>AssetSynq</span>
+          <img
+            src={LOGO.src}
+            alt={LOGO.alt}
+            width={LOGO.header.width}
+            height={LOGO.header.height}
+            className={LOGO.header.className}
+          />
         </a>
 
         <nav

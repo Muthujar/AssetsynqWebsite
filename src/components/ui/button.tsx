@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "gold";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -11,10 +11,11 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent text-white hover:bg-accent-hover shadow-sm shadow-accent/20",
+    "bg-brand-gradient text-white shadow-lg shadow-accent/25 hover:opacity-90 hover:shadow-accent/35",
   secondary:
-    "border border-border bg-surface text-foreground hover:border-accent/40 hover:bg-accent-light/30",
-  ghost: "text-foreground hover:bg-slate-100",
+    "border border-border bg-surface text-foreground hover:border-accent/30 hover:bg-accent-light",
+  ghost: "text-muted hover:bg-accent-light/60 hover:text-foreground",
+  gold: "bg-gold text-foreground font-semibold shadow-md shadow-gold/25 hover:bg-gold-hover",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -33,7 +34,7 @@ export function Button({
   return (
     <a
       className={cn(
-        "inline-flex items-center justify-center rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+        "inline-flex items-center justify-center rounded-lg transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
         variants[variant],
         sizes[size],
         className,
