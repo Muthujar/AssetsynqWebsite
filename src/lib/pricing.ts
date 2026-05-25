@@ -5,8 +5,8 @@ export const PRICING = {
   billing: "Yearly",
 
   firstYear: {
-    list: 15000,
-    offer: 9999,
+    list: 18000,
+    offer: 12000,
   },
   renewal: {
     list: 5999,
