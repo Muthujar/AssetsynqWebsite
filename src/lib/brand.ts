@@ -24,10 +24,11 @@ export const LOGO = {
   },
 } as const;
 
+/** Product screenshots — paths and display metadata for marketing sections. */
 export const PRODUCT_SCREENSHOTS = {
   dashboard: {
     src: "/dashboard-gold-finance.png",
-    alt: "AssetSynq Gold Finance dashboard with active pledges, cash balance, vault metals, and daily reports",
+    alt: "AssetSynq gold finance dashboard with pledges, cash, vault, and performance charts",
     width: 1440,
     height: 900,
   },
