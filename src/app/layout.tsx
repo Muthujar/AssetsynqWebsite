@@ -1,6 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
+import { JsonLd } from "@/components/seo/json-ld";
 import { LOGO } from "@/lib/brand";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_KEYWORDS,
+  DEFAULT_TITLE,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/seo";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -10,40 +18,46 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
-  description:
-    "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
-  metadataBase: new URL("https://assetsynq.com"),
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  keywords: DEFAULT_KEYWORDS,
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     type: "website",
-    url: "https://assetsynq.com/",
-    title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
-    description:
-      "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
+    url: `${SITE_URL}/`,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
     locale: "en_IN",
-    siteName: "AssetSynq",
+    siteName: SITE_NAME,
     images: [
       {
         url: LOGO.src,
         width: 1200,
         height: 320,
-        alt: "AssetSynQ",
+        alt: SITE_NAME,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AssetSynq - Pawn & Gold Loan Software for Pawnshops",
-    description:
-      "Manage loans, customers, interest, repledge, and reports. Simple pawn shop software for India. Tamil & English. Cloud based.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
     images: [LOGO.src],
   },
   alternates: {
-    canonical: "https://assetsynq.com/",
+    canonical: `${SITE_URL}/`,
   },
 };
 
@@ -58,7 +72,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} scroll-smooth`}>
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }

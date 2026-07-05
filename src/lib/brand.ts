@@ -1,7 +1,7 @@
 /** Main logo — change sizes here to scale across header, hero, and footer. */
 export const LOGO = {
   src: "/logo-assetsynq.png",
-  alt: "AssetSynQ",
+  alt: "AssetSynq",
   header: {
     width: 220,
     height: 48,
