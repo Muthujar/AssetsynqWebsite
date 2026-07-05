@@ -43,7 +43,12 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: "How much does it cost?",
-    answer: `${formatInr(PRICING.firstYear.offer)} for the first year (offer price, regular ${formatInr(PRICING.firstYear.list)}), then ${formatInr(PRICING.renewal.offer)}/year renewal (regular ${formatInr(PRICING.renewal.list)}). One branch included. Extra branch: ${formatInr(PRICING.extraBranch.offer)}/year. Unlimited users.`,
+    answer: `${formatInr(PRICING.firstYear.offer)} for the first year (offer price, regular ${formatInr(PRICING.firstYear.list)}), then ${formatInr(PRICING.renewal.offer)}/year renewal. One branch included. Extra branch: ${formatInr(PRICING.extraBranch.offer)}/year. Unlimited users.`,
+  },
+  {
+    question: "Is there a mobile companion?",
+    answer:
+      "Yes. Search loans, take payments, check overdue, and view today's cash from your phone — no install needed.",
   },
   {
     question: "Do I need to install software?",

@@ -19,19 +19,26 @@ function PriceBlock({
   size?: "lg" | "md";
 }) {
   const isLarge = size === "lg";
+  const showOffer = listPrice > offerPrice;
 
   return (
     <div className="text-center">
       <p className="text-sm text-dark-muted">{label}</p>
-      <p
-        className={`mt-1 font-medium text-dark-muted/70 line-through ${
-          isLarge ? "text-lg" : "text-base"
+      {showOffer && (
+        <p
+          className={`mt-1 font-medium text-dark-muted/70 line-through ${
+            isLarge ? "text-lg" : "text-base"
+          }`}
+        >
+          {formatInr(listPrice)}
+          <span className="text-sm font-normal"> / year</span>
+        </p>
+      )}
+      <div
+        className={`flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 ${
+          showOffer ? "mt-1" : "mt-2"
         }`}
       >
-        {formatInr(listPrice)}
-        <span className="text-sm font-normal"> / year</span>
-      </p>
-      <div className="mt-1 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1">
         <span
           className={`font-bold tracking-tight text-dark-foreground ${
             isLarge ? "text-4xl sm:text-5xl" : "text-2xl sm:text-3xl"
@@ -41,9 +48,11 @@ function PriceBlock({
         </span>
         <span className="text-dark-muted">/ year</span>
       </div>
-      <span className="mt-2 inline-block rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-semibold text-emerald-400">
-        Offer price
-      </span>
+      {showOffer && (
+        <span className="mt-2 inline-block rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-semibold text-emerald-400">
+          Offer price
+        </span>
+      )}
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#features", label: "Features" },
+  { href: "#mobile", label: "Mobile" },
   { href: "#benefits", label: "Benefits" },
   { href: "#pricing", label: "Pricing" },
   { href: "#contact", label: "Contact" },

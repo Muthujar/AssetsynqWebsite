@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { FeaturesGrid } from "@/components/sections/features-grid";
+import { MobileExperience } from "@/components/sections/mobile-experience";
 import { WhyChoose } from "@/components/sections/why-choose";
 import { PlanIncluded } from "@/components/sections/plan-included";
 import { ProblemSolution } from "@/components/sections/problem-solution";
@@ -25,6 +26,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <FeaturesGrid />
+        <MobileExperience />
         <WhyChoose />
         <PlanIncluded />
         <ProblemSolution />

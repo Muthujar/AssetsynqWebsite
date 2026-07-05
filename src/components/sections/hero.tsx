@@ -1,21 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { LOGO } from "@/lib/brand";
+import { PRODUCT_SCREENSHOTS } from "@/lib/brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 import { formatInr, PRICING } from "@/lib/pricing";
-import { Cloud, Languages, GraduationCap } from "lucide-react";
+import { Cloud, Languages, GraduationCap, Smartphone } from "lucide-react";
 
 const trustPills = [
   { icon: Cloud, label: "Cloud based" },
+  { icon: Smartphone, label: "Mobile companion" },
   { icon: Languages, label: "Tamil & English" },
   { icon: GraduationCap, label: "Setup included" },
 ];
 
-const showcaseTags = ["Loans & interest", "Branch cash", "Reports"];
-
 function HeroVisual() {
+  const { dashboard } = PRODUCT_SCREENSHOTS;
+
   return (
-    <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-      {/* Decorative glow */}
+    <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
       <div
         className="pointer-events-none absolute -right-8 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-brand-gradient opacity-20 blur-3xl"
         aria-hidden="true"
@@ -25,43 +25,30 @@ function HeroVisual() {
         aria-hidden="true"
       />
 
-      {/* Gold ring */}
-      <div
-        className="pointer-events-none absolute inset-4 rounded-3xl border border-gold/20"
-        aria-hidden="true"
-      />
-
-      {/* Main logo panel */}
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-surface p-8 shadow-xl shadow-accent/5 ring-1 ring-gold/15 sm:p-10">
-        <div className="h-1 w-full rounded-full bg-brand-gradient" aria-hidden="true" />
-        <div className="mt-8 flex flex-col items-center">
-          <img
-            src={LOGO.src}
-            alt={LOGO.alt}
-            width={LOGO.heroShowcase.width}
-            height={LOGO.heroShowcase.height}
-            className={LOGO.heroShowcase.className}
-          />
-          <p className="mt-6 text-center text-sm font-medium text-muted">
-            Pawn &amp; gold-loan management — secure cloud software
+      <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-xl shadow-accent/10 ring-1 ring-gold/15">
+        <div className="flex items-center gap-2 border-b border-border bg-background/80 px-4 py-3">
+          <div className="flex gap-1.5" aria-hidden="true">
+            <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+          </div>
+          <p className="mx-auto truncate text-xs font-medium text-muted">
+            AssetSynq — Gold Finance dashboard
           </p>
         </div>
 
-        {/* Mini feature strip */}
-        <div className="mt-8 grid grid-cols-3 gap-2 border-t border-border pt-6">
-          {showcaseTags.map((tag) => (
-            <div
-              key={tag}
-              className="rounded-lg bg-accent-light/60 px-2 py-2 text-center text-[10px] font-semibold leading-tight text-foreground sm:text-xs"
-            >
-              {tag}
-            </div>
-          ))}
-        </div>
+        <img
+          src={dashboard.src}
+          alt={dashboard.alt}
+          width={dashboard.width}
+          height={dashboard.height}
+          className="block w-full"
+          loading="eager"
+          fetchPriority="high"
+        />
       </div>
 
-      {/* Floating badges */}
-      <div className="absolute -left-2 top-8 hidden rounded-lg border border-gold/30 bg-surface px-3 py-2 shadow-md sm:block">
+      <div className="absolute -left-2 top-10 hidden rounded-lg border border-gold/30 bg-surface px-3 py-2 shadow-md sm:block">
         <p className="text-[10px] font-semibold uppercase tracking-wide text-gold-dim">
           Vault view
         </p>
@@ -69,9 +56,9 @@ function HeroVisual() {
       </div>
       <div className="absolute -right-1 bottom-12 hidden rounded-lg border border-accent/20 bg-surface px-3 py-2 shadow-md sm:block">
         <p className="text-[10px] font-semibold uppercase tracking-wide text-accent">
-          Cloud backup
+          Live dashboard
         </p>
-        <p className="text-xs font-bold text-foreground">Data safe</p>
+        <p className="text-xs font-bold text-foreground">Cash &amp; pledges</p>
       </div>
     </div>
   );

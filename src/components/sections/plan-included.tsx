@@ -18,7 +18,7 @@ const included = [
   {
     icon: Cloud,
     title: "Cloud Access",
-    description: "Use from shop PC or mobile browser. Data stored safely online.",
+    description: "Mobile companion on phone. Full desktop on PC. Data stored safely online.",
   },
   {
     icon: RefreshCcw,

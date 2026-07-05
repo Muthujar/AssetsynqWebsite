@@ -23,3 +23,12 @@ export const LOGO = {
     className: "h-9 w-auto max-w-[200px]",
   },
 } as const;
+
+export const PRODUCT_SCREENSHOTS = {
+  dashboard: {
+    src: "/dashboard-gold-finance.png",
+    alt: "AssetSynq Gold Finance dashboard with active pledges, cash balance, vault metals, and daily reports",
+    width: 1440,
+    height: 900,
+  },
+} as const;

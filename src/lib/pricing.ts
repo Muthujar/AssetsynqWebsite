@@ -9,8 +9,8 @@ export const PRICING = {
     offer: 12000,
   },
   renewal: {
-    list: 5999,
-    offer: 3999,
+    list: 2499,
+    offer: 2499,
   },
   extraBranch: {
     list: 3499,
@@ -39,4 +39,5 @@ export const PLAN_FEATURES = [
   "Cloud hosting & data backup",
   "Setup, training & WhatsApp support (first year)",
   "Tamil & English",
+  "Mobile companion (on the go)",
 ] as const;
