@@ -19,7 +19,7 @@ import {
 const features = [
   {
     icon: Zap,
-    title: "Fast Loan Creation",
+    title: "Fast Pledge Creation",
     description: "Create new pledges quickly with scheme-based terms.",
   },
   {
@@ -30,7 +30,7 @@ const features = [
   {
     icon: RefreshCw,
     title: "Repledge Management",
-    description: "Send loans to repledge stores and close them in bulk.",
+    description: "Send pledges to repledge stores and close them in bulk.",
   },
   {
     icon: Coins,
@@ -40,7 +40,7 @@ const features = [
   {
     icon: UserCheck,
     title: "Customer Records",
-    description: "Save customer details, ID proof, phone, and full loan history.",
+    description: "Save customer details, ID proof, phone, and full pledge history.",
   },
   {
     icon: Calculator,
@@ -55,12 +55,12 @@ const features = [
   {
     icon: FileSpreadsheet,
     title: "Detailed Reports",
-    description: "Daily cash, overdue list, and income reports. Export to Excel.",
+    description: "Daily cash, overdue pledges, and interest collected. Export to Excel.",
   },
   {
     icon: LayoutDashboard,
     title: "Live Dashboard",
-    description: "See active loans, cash in hand, vault metals, and profit at a glance.",
+    description: "See active pledges, cash in hand, vault metals, and profit at a glance.",
   },
   {
     icon: Gavel,
@@ -76,12 +76,11 @@ const features = [
 
 export function FeaturesGrid() {
   return (
-    <section id="features" className="bg-background py-16 sm:py-20">
+    <section id="features" className="bg-background py-14 sm:py-16">
       <div className="section-container">
         <SectionHeader
-          eyebrow="Pawn shop software"
-          title="Your all-in-one solution for pawn shop management"
-          description="Manage customers, loans, interest, and reports — simple screens built for Indian pawn brokers."
+          title="Built Specifically for Pawn Shops"
+          description="Designed for Indian pawn shops and gold loan businesses."
         />
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2 sm:gap-4">

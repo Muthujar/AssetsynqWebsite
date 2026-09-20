@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { PRODUCT_SCREENSHOTS } from "@/lib/brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
-import { formatInr, PRICING } from "@/lib/pricing";
 import { Cloud, Languages, GraduationCap, Smartphone } from "lucide-react";
 
 const trustPills = [
-  { icon: Cloud, label: "Cloud based" },
-  { icon: Smartphone, label: "Mobile companion" },
+  { icon: Cloud, label: "Cloud Based" },
   { icon: Languages, label: "Tamil & English" },
-  { icon: GraduationCap, label: "Setup included" },
+  { icon: Smartphone, label: "Works on your phone" },
+  { icon: GraduationCap, label: "Setup & Training Included" },
 ];
 
 function HeroVisual() {
@@ -33,7 +32,7 @@ function HeroVisual() {
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
           </div>
           <p className="mx-auto truncate text-xs font-medium text-muted">
-            AssetSynq — Gold Finance dashboard
+            AssetSynq — today at the shop
           </p>
         </div>
 
@@ -80,16 +79,12 @@ export function Hero() {
               Pawn shop software
             </p>
             <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
-              Pawn &amp;{" "}
-              <span className="text-gradient">Gold Loan</span> Software for
-              Pawnshops
+              Run your pawn shop without the{" "}
+              <span className="text-gradient">register book</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
-              Manage loans, customers, interest, repledge, and reports in one
-              place. Built for Indian pawn and gold-loan shops.
-            </p>
-            <p className="mt-3 text-base text-muted">
-              We set up your account for you — no install needed.
+              New pledge, take payment, close jewels — on phone or PC. Tamil
+              and English. We set up your shop.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
@@ -100,10 +95,10 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp us
+                WhatsApp for Demo
               </Button>
-              <Button href="#pricing" variant="secondary" size="lg">
-                See pricing
+              <Button href="#migration" variant="secondary" size="lg">
+                See how it works
               </Button>
             </div>
 
@@ -118,11 +113,6 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-
-            <p className="mt-6 inline-flex items-center rounded-full border border-gold/35 bg-gold/10 px-4 py-1.5 text-sm font-semibold text-foreground">
-              From {formatInr(PRICING.firstYear.offer)}/year · 1 branch ·
-              Unlimited users
-            </p>
           </div>
 
           {/* Visual */}

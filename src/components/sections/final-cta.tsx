@@ -3,7 +3,7 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-brand-gradient py-16 sm:py-20">
+    <section className="relative overflow-hidden bg-brand-gradient py-12 sm:py-16">
       <div className="section-container relative text-center">
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">
           Ready to try AssetSynq?
@@ -20,7 +20,7 @@ export function FinalCTA() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Chat on WhatsApp
+            WhatsApp for Demo
           </Button>
           <Button
             href="#contact"

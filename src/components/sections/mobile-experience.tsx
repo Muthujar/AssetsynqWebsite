@@ -3,33 +3,22 @@ import {
   BookOpen,
   Coins,
   Home,
+  LayoutDashboard,
+  RefreshCw,
   Search,
   Settings,
   Smartphone,
+  Wallet,
 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/feature-card";
 
 const mobileFeatures = [
-  {
-    icon: BookOpen,
-    title: "New pledge",
-    description: "Step-by-step — from your phone.",
-  },
-  {
-    icon: Search,
-    title: "Find loan",
-    description: "Name, phone, or loan number.",
-  },
-  {
-    icon: Bell,
-    title: "Overdue",
-    description: "Due loans at a glance, anywhere.",
-  },
-  {
-    icon: Coins,
-    title: "Today's cash",
-    description: "Today's cash flow — no PC needed.",
-  },
+  { icon: Search, title: "Find pledge" },
+  { icon: Bell, title: "Overdue pledges" },
+  { icon: Coins, title: "Cash Today" },
+  { icon: RefreshCw, title: "Repledges" },
+  { icon: Wallet, title: "Close pledge" },
+  { icon: LayoutDashboard, title: "Today" },
 ];
 
 const navItems = [
@@ -53,7 +42,7 @@ function PhoneMockup() {
           <div className="flex items-center justify-between bg-brand-gradient px-4 py-3 text-white">
             <div>
               <p className="text-[10px] font-medium uppercase tracking-wide opacity-80">
-                Mobile companion
+                On your phone
               </p>
               <p className="text-sm font-bold">AssetSynq</p>
             </div>
@@ -62,7 +51,7 @@ function PhoneMockup() {
 
           <div className="space-y-3 p-4">
             <div className="grid grid-cols-2 gap-2">
-              {["Active loans", "Cash in hand", "Overdue", "Vault gold"].map(
+              {["Active pledges", "Cash in hand", "Overdue", "Vault gold"].map(
                 (label) => (
                   <div
                     key={label}
@@ -82,12 +71,12 @@ function PhoneMockup() {
                 Quick actions
               </p>
               <div className="grid grid-cols-2 gap-2">
-                {["Find loan", "Overdue", "Repledges", "New pledge"].map(
+                {["Find pledge", "Overdue", "Repledges", "Close pledge"].map(
                   (action) => (
                     <div
                       key={action}
                       className={`rounded-lg px-2 py-2.5 text-center text-[10px] font-semibold ${
-                        action === "New pledge"
+                        action === "Close pledge"
                           ? "bg-accent text-white"
                           : "border border-border bg-background text-foreground"
                       }`}
@@ -138,46 +127,31 @@ export function MobileExperience() {
   return (
     <section
       id="mobile"
-      className="border-y border-border bg-accent-light/30 py-16 sm:py-20"
+      className="border-y border-border bg-accent-light/30 py-14 sm:py-16"
     >
       <div className="section-container">
         <SectionHeader
-          eyebrow="Mobile companion"
-          title="Your shop companion on mobile"
-          description="Search, pay, and check on the go — for owners and managers. Desktop stays at the shop."
+          eyebrow="On your phone"
+          title="Manage Your Shop From Anywhere"
+          description="Search pledges, take payment, close jewels, and check overdue — from your phone."
         />
 
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <PhoneMockup />
 
           <div>
-            <p className="text-base leading-relaxed text-muted">
-              Open AssetSynq on your phone — search loans, take payments,
-              check overdue, view today&apos;s cash. Built for when you&apos;re
-              away from the shop PC.
-            </p>
-            <p className="mt-3 text-sm text-muted">
-              No install. Tamil &amp; English. Staff use full desktop at the
-              shop.
-            </p>
-
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-              {mobileFeatures.map(({ icon: Icon, title, description }) => (
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {mobileFeatures.map(({ icon: Icon, title }) => (
                 <li
                   key={title}
-                  className="flex gap-3 rounded-xl border border-border bg-surface p-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-xl border border-border bg-surface p-4 shadow-sm"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-gradient text-white shadow-sm">
                     <Icon className="h-4 w-4" aria-hidden="true" />
                   </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-foreground">
-                      {title}
-                    </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-muted">
-                      {description}
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-semibold text-foreground">
+                    {title}
+                  </h3>
                 </li>
               ))}
             </ul>

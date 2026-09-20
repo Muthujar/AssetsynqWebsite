@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, Phone, Clock, MessageCircle } from "lucide-react";
+import { Mail, Phone, Clock, MessageCircle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   buildEnquiryWhatsAppMessage,
@@ -35,17 +35,37 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="border-y border-border bg-surface py-16 sm:py-20"
+      className="border-y border-border bg-surface py-14 sm:py-16"
     >
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="section-heading">Get started with us</h2>
+            <h2 className="section-heading font-tamil" lang="ta">
+              Demo பார்க்க WhatsApp செய்யுங்கள்
+            </h2>
             <p className="section-subheading">
-              We set up your shop account for you — no self sign-up. Message us
-              on WhatsApp for the fastest response, or send an enquiry using the
-              form.
+              See the software in action before making any decision.
             </p>
+
+            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+              {[
+                "Live Demo",
+                "Tamil Support",
+                "Setup Guidance",
+                "Quote on WhatsApp",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-sm font-medium text-foreground"
+                >
+                  <Check
+                    className="h-4 w-4 shrink-0 text-accent"
+                    aria-hidden="true"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-8">
               <Button
@@ -54,14 +74,11 @@ export function Contact() {
                 size="lg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="w-full whitespace-normal text-center font-tamil sm:w-auto"
               >
-                <MessageCircle className="mr-2 h-5 w-5" aria-hidden="true" />
-                Chat on WhatsApp
+                <MessageCircle className="mr-2 h-5 w-5 shrink-0" aria-hidden="true" />
+                Demo பார்க்க WhatsApp செய்யுங்கள்
               </Button>
-              <p className="mt-3 text-sm text-muted">
-                Preferred — demo, pricing, and account setup
-              </p>
             </div>
 
             <ul className="mt-8 space-y-5">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Noto_Sans_Tamil } from "next/font/google";
 import { JsonLd } from "@/components/seo/json-ld";
 import { LOGO } from "@/lib/brand";
 import {
@@ -14,6 +14,12 @@ import "./globals.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const notoSansTamil = Noto_Sans_Tamil({
+  variable: "--font-noto-sans-tamil",
+  subsets: ["tamil"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -71,7 +77,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${notoSansTamil.variable} scroll-smooth`}
+    >
       <body className="min-h-screen antialiased">
         <JsonLd />
         {children}

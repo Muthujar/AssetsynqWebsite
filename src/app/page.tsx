@@ -2,14 +2,11 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { FeaturesGrid } from "@/components/sections/features-grid";
+import { TamilPainPoints } from "@/components/sections/tamil-pain-points";
+import { Migration } from "@/components/sections/migration";
 import { MobileExperience } from "@/components/sections/mobile-experience";
-import { WhyChoose } from "@/components/sections/why-choose";
-import { PlanIncluded } from "@/components/sections/plan-included";
-import { ProblemSolution } from "@/components/sections/problem-solution";
-import { HowItWorks } from "@/components/sections/how-it-works";
-import { Pricing } from "@/components/sections/pricing";
-import { Benefits } from "@/components/sections/benefits";
 import { Contact } from "@/components/sections/contact";
+import { Trust } from "@/components/sections/trust";
 import { FAQ } from "@/components/sections/faq";
 import { FinalCTA } from "@/components/sections/final-cta";
 
@@ -26,14 +23,11 @@ export default function Home() {
       <main id="main">
         <Hero />
         <FeaturesGrid />
+        <TamilPainPoints />
+        <Migration />
         <MobileExperience />
-        <WhyChoose />
-        <PlanIncluded />
-        <ProblemSolution />
-        <HowItWorks />
-        <Pricing />
-        <Benefits />
         <Contact />
+        <Trust />
         <FAQ />
         <FinalCTA />
       </main>

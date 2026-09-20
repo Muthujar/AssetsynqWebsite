@@ -2,10 +2,10 @@ export const SITE_URL = "https://assetsynq.com";
 export const SITE_NAME = "AssetSynq";
 
 export const DEFAULT_TITLE =
-  "AssetSynq | Pawn & Gold Loan Software for Indian Pawnshops";
+  "AssetSynq | Pawn shop software for Indian gold loan shops";
 
 export const DEFAULT_DESCRIPTION =
-  "AssetSynq is pawn & gold loan software for Indian shops. Manage customers, interest, repledge, reports & Tamil/English UI. Cloud-based with setup included.";
+  "Run your pawn shop without the register book. Pledges, interest, and cash — Tamil and English. Setup and training included.";
 
 export const DEFAULT_KEYWORDS = [
   "pawn shop software",

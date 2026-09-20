@@ -1,6 +1,5 @@
 import { CONTACT } from "@/lib/contact";
 import { FAQS } from "@/lib/faqs";
-import { PRICING } from "@/lib/pricing";
 import {
   DEFAULT_DESCRIPTION,
   SITE_NAME,
@@ -50,12 +49,6 @@ export function JsonLd() {
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     inLanguage: ["en-IN", "ta-IN"],
-    offers: {
-      "@type": "Offer",
-      price: PRICING.firstYear.offer,
-      priceCurrency: "INR",
-      description: "First year subscription",
-    },
   };
 
   const faqPage = {

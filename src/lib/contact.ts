@@ -16,7 +16,7 @@ export function whatsappUrl(text?: string): string {
 }
 
 export const DEFAULT_WHATSAPP_MESSAGE =
-  "Hi, I'm interested in AssetSynq for my pawn shop. I'd like to know more about pricing and setup.";
+  "Hi, I'd like a demo of AssetSynq for my pawn shop.";
 
 export function buildEnquiryWhatsAppMessage(data: {
   name: string;
