@@ -4,7 +4,7 @@ export const CONTACT = {
   phone: "7200333298",
   phoneDisplay: "+91 72003 33298",
   phoneTel: "+917200333298",
-  email: "hello@assetsynq.com",
+  email: "support@assetsynq.com",
   whatsappNumber: "917200333298",
   businessHours: "Mon–Sat, 9 AM – 6 PM IST",
 } as const;
