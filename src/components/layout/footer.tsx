@@ -3,13 +3,22 @@ import Link from "next/link";
 import { LOGO } from "@/lib/brand";
 import { CONTACT, whatsappUrl } from "@/lib/contact";
 
+const footerLinks = [
+  { href: "/pawn-shop-software", label: "Pawn shop software" },
+  { href: "/gold-loan-software", label: "Gold loan software" },
+  { href: "/pawn-broker-software", label: "Pawn broker software" },
+  { href: "/pawn-shop-software/chennai", label: "Chennai" },
+  { href: "/pawn-shop-software/dubai", label: "Dubai" },
+  { href: "/#contact", label: "Enquire" },
+];
+
 export function Footer() {
   return (
     <footer className="section-dark border-t border-dark-border py-10">
       <div className="section-container">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <Link
-            href="#top"
+            href="/"
             className="flex flex-col items-center gap-2 rounded-md outline-none ring-offset-4 ring-offset-dark focus-visible:ring-2 focus-visible:ring-accent sm:items-start"
             aria-label="AssetSynq home"
           >
@@ -59,16 +68,19 @@ export function Footer() {
             </ul>
           </div>
 
-          <nav aria-label="Footer">
-            <ul className="flex items-center justify-center gap-6 lg:justify-end">
-              <li>
-                <a
-                  href="#contact"
-                  className="text-sm text-dark-muted transition-colors hover:text-accent"
-                >
-                  Enquire
-                </a>
-              </li>
+          <nav aria-label="Footer" className="text-center sm:text-start">
+            <p className="text-sm font-medium text-dark-foreground">Software</p>
+            <ul className="mt-3 space-y-2 text-sm text-dark-muted">
+              {footerLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="transition-colors hover:text-accent"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

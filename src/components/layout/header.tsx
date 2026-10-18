@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,12 +10,12 @@ import { LOGO } from "@/lib/brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 
 const navLinks = [
-  { href: "#top", label: "Home" },
-  { href: "#features", label: "Features" },
-  { href: "#migration", label: "How it works" },
-  { href: "#mobile", label: "Mobile" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#features", label: "Features" },
+  { href: "/#migration", label: "How it works" },
+  { href: "/#mobile", label: "Mobile" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -46,8 +47,8 @@ export function Header() {
       )}
     >
       <div className="section-container flex h-16 items-center justify-between">
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="flex shrink-0 items-center"
           aria-label="AssetSynq home"
         >
@@ -59,7 +60,7 @@ export function Header() {
             className={LOGO.header.className}
             preload
           />
-        </a>
+        </Link>
 
         <nav
           id="mobile-nav"
@@ -105,7 +106,7 @@ export function Header() {
             >
               WhatsApp
             </Button>
-            <Button href="#contact" variant="secondary" size="sm" onClick={closeMenu}>
+            <Button href="/#contact" variant="secondary" size="sm" onClick={closeMenu}>
               Enquire
             </Button>
           </div>

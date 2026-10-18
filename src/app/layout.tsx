@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Noto_Sans_Tamil } from "next/font/google";
-import { JsonLd } from "@/components/seo/json-ld";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_KEYWORDS,
@@ -70,7 +69,6 @@ export default function RootLayout({
       className={`${dmSans.variable} ${notoSansTamil.variable} scroll-smooth`}
     >
       <body className="min-h-screen antialiased">
-        <JsonLd />
         {children}
       </body>
     </html>
