@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -10,7 +11,9 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#features", label: "Features" },
+  { href: "#migration", label: "How it works" },
   { href: "#mobile", label: "Mobile" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -46,21 +49,25 @@ export function Header() {
         <a
           href="#top"
           className="flex shrink-0 items-center"
-          aria-label="AssetSynQ home"
+          aria-label="AssetSynq home"
         >
-          <img
+          <Image
             src={LOGO.src}
             alt={LOGO.alt}
             width={LOGO.header.width}
             height={LOGO.header.height}
             className={LOGO.header.className}
+            preload
           />
         </a>
 
         <nav
+          id="mobile-nav"
           className={cn(
-            "fixed inset-0 top-16 z-40 flex flex-col gap-6 bg-surface p-6 transition-transform md:static md:inset-auto md:top-auto md:flex md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0",
-            open ? "translate-x-0" : "translate-x-full md:translate-x-0",
+            "fixed inset-0 top-16 z-40 flex flex-col gap-6 bg-surface p-6 transition-[transform,visibility] md:static md:inset-auto md:top-auto md:flex md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0",
+            open
+              ? "visible translate-x-0"
+              : "invisible translate-x-full md:visible md:translate-x-0",
           )}
           aria-label="Main"
         >

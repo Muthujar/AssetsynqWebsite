@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { LOGO } from "@/lib/brand";
 import { CONTACT, whatsappUrl } from "@/lib/contact";
@@ -10,10 +11,10 @@ export function Footer() {
           <Link
             href="#top"
             className="flex flex-col items-center gap-2 rounded-md outline-none ring-offset-4 ring-offset-dark focus-visible:ring-2 focus-visible:ring-accent sm:items-start"
-            aria-label="AssetSynQ home"
+            aria-label="AssetSynq home"
           >
             <span className="rounded-lg bg-white px-3 py-1.5">
-              <img
+              <Image
                 src={LOGO.src}
                 alt=""
                 width={LOGO.footer.width}
@@ -22,7 +23,7 @@ export function Footer() {
               />
             </span>
             <span className="text-center text-sm text-dark-muted sm:text-start">
-              © 2026 AssetSynq. All rights reserved.
+              © {new Date().getFullYear()} AssetSynq. All rights reserved.
             </span>
           </Link>
 
@@ -66,22 +67,6 @@ export function Footer() {
                   className="text-sm text-dark-muted transition-colors hover:text-accent"
                 >
                   Enquire
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-dark-muted transition-colors hover:text-accent"
-                >
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-dark-muted transition-colors hover:text-accent"
-                >
-                  Terms
                 </a>
               </li>
             </ul>

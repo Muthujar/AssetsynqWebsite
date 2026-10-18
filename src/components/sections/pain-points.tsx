@@ -1,25 +1,21 @@
 import { CheckList } from "@/components/ui/feature-card";
 
 const points = [
-  "Interest கணக்கு தானாக கணக்கிடப்படும்",
-  "Customer History உடனடியாக தேடலாம்",
-  "Daily Cash Report ஒரே Click-ல்",
-  "Repledge & Auction ஒரே System-ல்",
-  "Branch-wise Management",
-  "Excel Export & Cloud Backup",
+  "Interest calculated automatically",
+  "Find any customer's history instantly",
+  "Daily cash report in one click",
+  "Repledge & auction in one system",
+  "Branch-wise management",
+  "Excel export & cloud backup",
 ] as const;
 
-export function TamilPainPoints() {
+export function PainPoints() {
   return (
-    <section
-      id="tamil"
-      lang="ta"
-      className="section-dark font-tamil py-14 sm:py-16"
-    >
+    <section id="register-book" className="section-dark py-14 sm:py-16">
       <div className="section-container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="section-heading text-balance">
-            இன்னும் Register Book பயன்படுத்துகிறீர்களா?
+            Still using a register book?
           </h2>
         </div>
 

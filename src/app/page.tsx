@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { FeaturesGrid } from "@/components/sections/features-grid";
-import { TamilPainPoints } from "@/components/sections/tamil-pain-points";
+import { PainPoints } from "@/components/sections/pain-points";
 import { Migration } from "@/components/sections/migration";
 import { MobileExperience } from "@/components/sections/mobile-experience";
 import { Contact } from "@/components/sections/contact";
@@ -23,7 +23,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <FeaturesGrid />
-        <TamilPainPoints />
+        <PainPoints />
         <Migration />
         <MobileExperience />
         <Contact />

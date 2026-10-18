@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Noto_Sans_Tamil } from "next/font/google";
 import { JsonLd } from "@/components/seo/json-ld";
-import { LOGO } from "@/lib/brand";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_KEYWORDS,
@@ -20,6 +19,8 @@ const dmSans = DM_Sans({
 const notoSansTamil = Noto_Sans_Tamil({
   variable: "--font-noto-sans-tamil",
   subsets: ["tamil"],
+  // Only used by the FAQ Tamil toggle, so skip preloading it on first paint.
+  preload: false,
   weight: ["400", "500", "600", "700"],
 });
 
@@ -28,10 +29,6 @@ export const metadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   keywords: DEFAULT_KEYWORDS,
   metadataBase: new URL(SITE_URL),
-  icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
-  },
   robots: {
     index: true,
     follow: true,
@@ -47,20 +44,11 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     locale: "en_IN",
     siteName: SITE_NAME,
-    images: [
-      {
-        url: LOGO.src,
-        width: 1200,
-        height: 320,
-        alt: SITE_NAME,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: [LOGO.src],
   },
   alternates: {
     canonical: `${SITE_URL}/`,

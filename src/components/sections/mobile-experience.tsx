@@ -51,15 +51,20 @@ function PhoneMockup() {
 
           <div className="space-y-3 p-4">
             <div className="grid grid-cols-2 gap-2">
-              {["Active pledges", "Cash in hand", "Overdue", "Vault gold"].map(
-                (label) => (
+              {[
+                { label: "Active pledges", value: "248" },
+                { label: "Cash in hand", value: "₹1,84,500" },
+                { label: "Overdue", value: "12" },
+                { label: "Vault gold", value: "1.86 kg" },
+              ].map(
+                ({ label, value }) => (
                   <div
                     key={label}
                     className="rounded-lg border border-border bg-background px-2.5 py-2"
                   >
                     <p className="text-[9px] font-medium text-muted">{label}</p>
                     <p className="mt-0.5 text-xs font-bold text-foreground">
-                      —
+                      {value}
                     </p>
                   </div>
                 ),

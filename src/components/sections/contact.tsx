@@ -14,7 +14,7 @@ const inputClass =
   "w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-accent focus:ring-2 focus:ring-accent/20";
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [sentMessage, setSentMessage] = useState<string | null>(null);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,7 +29,7 @@ export function Contact() {
       message: String(formData.get("message") ?? ""),
     });
     window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+    setSentMessage(message);
   }
 
   return (
@@ -40,8 +40,8 @@ export function Contact() {
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="section-heading font-tamil" lang="ta">
-              Demo பார்க்க WhatsApp செய்யுங்கள்
+            <h2 className="section-heading">
+              WhatsApp us for a demo
             </h2>
             <p className="section-subheading">
               See the software in action before making any decision.
@@ -74,10 +74,10 @@ export function Contact() {
                 size="lg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full whitespace-normal text-center font-tamil sm:w-auto"
+                className="w-full whitespace-normal text-center sm:w-auto"
               >
                 <MessageCircle className="mr-2 h-5 w-5 shrink-0" aria-hidden="true" />
-                Demo பார்க்க WhatsApp செய்யுங்கள்
+                WhatsApp us for a demo
               </Button>
             </div>
 
@@ -153,7 +153,7 @@ export function Contact() {
               so our team can reply and arrange setup.
             </p>
 
-            {submitted ? (
+            {sentMessage ? (
               <div className="mt-8 flex min-h-[280px] flex-col items-center justify-center text-center">
                 <p className="text-lg font-semibold text-foreground">
                   Thank you!
@@ -172,6 +172,12 @@ export function Contact() {
                 >
                   Open WhatsApp again
                 </Button>
+                <a
+                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("AssetSynq enquiry")}&body=${encodeURIComponent(sentMessage)}`}
+                  className="mt-4 text-sm text-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
+                >
+                  WhatsApp didn&apos;t open? Email your enquiry instead
+                </a>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-6 space-y-5">

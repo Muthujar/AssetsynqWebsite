@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PRODUCT_SCREENSHOTS } from "@/lib/brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
@@ -36,14 +37,14 @@ function HeroVisual() {
           </p>
         </div>
 
-        <img
+        <Image
           src={dashboard.src}
           alt={dashboard.alt}
           width={dashboard.width}
           height={dashboard.height}
-          className="block w-full"
-          loading="eager"
-          fetchPriority="high"
+          className="block h-auto w-full"
+          sizes="(min-width: 1152px) 544px, (min-width: 1024px) 45vw, (min-width: 672px) 672px, 100vw"
+          preload
         />
       </div>
 
