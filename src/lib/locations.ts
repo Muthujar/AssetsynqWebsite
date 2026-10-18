@@ -3,7 +3,7 @@
 export type Location = {
   slug: string;
   name: string;
-  region: "North Tamil Nadu" | "Tamil Nadu" | "UAE";
+  region: "Tamil Nadu" | "UAE";
   /** Unique opening paragraph for this page — keep each one different. */
   intro: string;
   /** Nearby towns and areas we mention for local relevance. */
@@ -14,7 +14,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "chennai",
     name: "Chennai",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Chennai pawn brokers handle a high volume of pledges every day, often across more than one branch. AssetSynq replaces the register book with a fast pledge screen, automatic interest, and a live view of cash and gold in every branch.",
     nearby: ["T. Nagar", "Sowcarpet", "Tambaram", "Ambattur", "Avadi", "Porur"],
@@ -22,7 +22,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "vellore",
     name: "Vellore",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Gold loan shops in Vellore serve customers from town and the surrounding villages. AssetSynq keeps every customer's pledge history in one place, so your staff can find old pledges in seconds instead of turning register pages.",
     nearby: ["Katpadi", "Gudiyatham", "Ranipet", "Arcot", "Walajapet", "Vaniyambadi"],
@@ -30,7 +30,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "kanchipuram",
     name: "Kanchipuram",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Kanchipuram pawn shops work with families who pledge gold for weddings, farming, and business needs. AssetSynq calculates interest the way your schemes are set up and shows overdue pledges before they become a problem.",
     nearby: ["Sriperumbudur", "Walajabad", "Uthiramerur", "Cheyyar"],
@@ -38,7 +38,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "tiruvallur",
     name: "Tiruvallur",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "From Tiruvallur town to Ponneri and Gummidipoondi, pawn brokers need simple software their staff can learn in a day. AssetSynq works in the browser on any PC or phone, with Tamil and English, and we train your team.",
     nearby: ["Ponneri", "Gummidipoondi", "Tiruttani", "Uthukottai", "Poonamallee"],
@@ -46,7 +46,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "chengalpattu",
     name: "Chengalpattu",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Chengalpattu district is growing fast, and so are its gold loan businesses. AssetSynq lets you open new branches without new register books: each branch gets its own cash, pledges, and reports, all visible to the owner.",
     nearby: ["Tambaram", "Guduvanchery", "Maraimalai Nagar", "Madurantakam", "Kelambakkam"],
@@ -54,7 +54,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "villupuram",
     name: "Villupuram",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Villupuram pawn shops often run on long-standing customer trust and handwritten records. AssetSynq moves those records into the cloud, including your existing customers and open pledges, so nothing is lost when you switch.",
     nearby: ["Tindivanam", "Gingee", "Kallakurichi", "Ulundurpet", "Vikravandi"],
@@ -62,7 +62,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "tiruvannamalai",
     name: "Tiruvannamalai",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Gold loan businesses in Tiruvannamalai deal with part payments, renewals, and repledges every week. AssetSynq records each of these in a few taps and keeps the customer's balance and interest correct automatically.",
     nearby: ["Arani", "Polur", "Chengam", "Vandavasi", "Cheyyar"],
@@ -70,7 +70,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "cuddalore",
     name: "Cuddalore",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "Cuddalore pawn brokers need a clear daily cash report at closing time. AssetSynq tracks opening balance, cash in and out, and till closing for each branch, and exports reports to Excel in one click.",
     nearby: ["Panruti", "Chidambaram", "Neyveli", "Virudhachalam", "Nellikuppam"],
@@ -78,7 +78,7 @@ export const LOCATIONS: Location[] = [
   {
     slug: "krishnagiri",
     name: "Krishnagiri",
-    region: "North Tamil Nadu",
+    region: "Tamil Nadu",
     intro:
       "From Krishnagiri to Hosur, pawn shop owners often manage the business while away from the counter. AssetSynq's phone view shows today's pledges, cash in hand, and overdue items wherever you are.",
     nearby: ["Hosur", "Denkanikottai", "Bargur", "Uthangarai", "Pochampalli"],
@@ -121,11 +121,27 @@ export const LOCATIONS: Location[] = [
     region: "UAE",
     intro:
       "AssetSynq is cloud-based, so gold loan and jewellery businesses in Dubai can use the same pledge workflow as shops in India. It runs in the browser on any PC or phone, and our team supports you over WhatsApp.",
-    nearby: ["Deira Gold Souk", "Bur Dubai", "Karama", "Sharjah", "Ajman"],
+    nearby: ["Deira Gold Souk", "Bur Dubai", "Karama", "Al Barsha", "Jebel Ali"],
+  },
+  {
+    slug: "abu-dhabi",
+    name: "Abu Dhabi",
+    region: "UAE",
+    intro:
+      "Gold loan and jewellery businesses in Abu Dhabi can run their pledges, interest, and daily cash in AssetSynq from any browser. There is nothing to install, your data is backed up in the cloud, and setup and training are done online.",
+    nearby: ["Mussafah", "Khalifa City", "Al Ain", "Madinat Zayed", "Al Reem Island"],
+  },
+  {
+    slug: "sharjah",
+    name: "Sharjah",
+    region: "UAE",
+    intro:
+      "Sharjah gold loan and jewellery businesses often serve customers across the northern Emirates. AssetSynq keeps every customer's pledge history and payments in one place, on the shop PC or on the owner's phone.",
+    nearby: ["Rolla", "Al Nahda", "Ajman", "Umm Al Quwain", "Ras Al Khaimah"],
   },
 ];
 
-export const LOCATION_REGIONS = ["North Tamil Nadu", "Tamil Nadu", "UAE"] as const;
+export const LOCATION_REGIONS = ["Tamil Nadu", "UAE"] as const;
 
 export function getLocation(slug: string) {
   return LOCATIONS.find((location) => location.slug === slug);
