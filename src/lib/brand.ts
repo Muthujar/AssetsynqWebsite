@@ -7,6 +7,8 @@ export const LOGO = {
     height: 45,
     className: "h-9 w-auto max-w-[200px] md:h-10 md:max-w-none",
   },
+  /** Same logo with the "Asset" wordmark in white, for navy/violet backgrounds. */
+  lightSrc: "/logo-assetsynq-light.png",
   footer: {
     width: 180,
     height: 37,

@@ -22,15 +22,13 @@ export function Footer() {
             className="flex flex-col items-center gap-2 rounded-md outline-none ring-offset-4 ring-offset-dark focus-visible:ring-2 focus-visible:ring-accent sm:items-start"
             aria-label="AssetSynQ home"
           >
-            <span className="rounded-lg bg-white px-3 py-1.5">
-              <Image
-                src={LOGO.src}
-                alt=""
-                width={LOGO.footer.width}
-                height={LOGO.footer.height}
-                className={LOGO.footer.className}
-              />
-            </span>
+            <Image
+              src={LOGO.lightSrc}
+              alt=""
+              width={LOGO.footer.width}
+              height={LOGO.footer.height}
+              className={LOGO.footer.className}
+            />
             <span className="text-center text-sm text-dark-muted sm:text-start">
               © {new Date().getFullYear()} AssetSynQ. All rights reserved.
             </span>
