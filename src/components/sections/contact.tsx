@@ -173,7 +173,7 @@ export function Contact() {
                   Open WhatsApp again
                 </Button>
                 <a
-                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("AssetSynq enquiry")}&body=${encodeURIComponent(sentMessage)}`}
+                  href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("AssetSynQ enquiry")}&body=${encodeURIComponent(sentMessage)}`}
                   className="mt-4 text-sm text-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
                 >
                   WhatsApp didn&apos;t open? Email your enquiry instead

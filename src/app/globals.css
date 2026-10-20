@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
+/* Palette mirrors the AssetSynQ app (AssetSync_frontend tailwind config): navy, violet primary, bright gold. */
 :root {
   --background: #f8f9fc;
-  --foreground: #1a2340;
-  --muted: #64748b;
-  --border: #e2e8f0;
+  --foreground: #0b1340;
+  --muted: #4b5563;
+  --border: #e5e7eb;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --accent: #eb008b;
-  --accent-end: #7021b1;
-  --accent-light: #fdf2f8;
-  --accent-hover: #c9007a;
-  --gold: #d4a853;
-  --gold-bright: #f5d76e;
-  --gold-dim: #9a7b2f;
-  --gold-hover: #c9a227;
+  --accent: #7c3aed;
+  --accent-end: #c026d3;
+  --accent-light: #f1ebfe;
+  --accent-hover: #6d28d9;
+  --navy: #0b1340;
+  --navy-mid: #1d1b5e;
+  --gold: #f5c400;
+  --gold-bright: #f5c400;
+  --gold-dim: #a16207;
+  --gold-hover: #e0b300;
+  --gold-light: #fef9e1;
+  --success: #15803d;
   --vault: #080b12;
-  --dark: #12182b;
-  --dark-elevated: #1a2340;
-  --dark-border: #2a3555;
-  --dark-foreground: #f0f2f8;
-  --dark-muted: #94a3b8;
+  --dark: #0b1340;
+  --dark-elevated: #1d1b5e;
+  --dark-border: #2e2c78;
+  --dark-foreground: #f5f6fc;
+  --dark-muted: #c3c6e0;
 }
 
 @theme inline {
@@ -34,17 +39,21 @@
   --color-accent-end: var(--accent-end);
   --color-accent-light: var(--accent-light);
   --color-accent-hover: var(--accent-hover);
+  --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-gold-dim: var(--gold-dim);
+  --color-gold-light: var(--gold-light);
+  --color-success: var(--success);
   --color-vault: var(--vault);
   --color-dark: var(--dark);
   --color-dark-elevated: var(--dark-elevated);
   --color-dark-border: var(--dark-border);
   --color-dark-foreground: var(--dark-foreground);
   --color-dark-muted: var(--dark-muted);
-  --font-sans: var(--font-dm-sans);
-  --font-tamil: var(--font-noto-sans-tamil), var(--font-dm-sans);
+  --font-sans: var(--font-inter);
+  --font-tamil: var(--font-noto-sans-tamil), var(--font-inter);
 }
 
 html {
@@ -54,11 +63,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 ::selection {
-  background: rgba(236, 72, 153, 0.2);
+  background: rgba(124, 58, 237, 0.2);
   color: var(--foreground);
 }
 
@@ -67,7 +76,7 @@ body {
 }
 
 .section-heading {
-  @apply text-3xl font-semibold tracking-tight text-foreground sm:text-4xl;
+  @apply text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl;
 }
 
 .section-subheading {
@@ -88,22 +97,21 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent) 0%, #c084fc 55%, var(--accent-end) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-end) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Icon tiles and primary buttons: the app's violet → fuchsia KPI tile. */
 .bg-brand-gradient {
-  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 50%, var(--accent-end) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-end) 100%);
 }
 
+/* Same panel as the app's sign-in page: navy → deep indigo → violet. */
 .bg-hero {
-  background:
-    radial-gradient(ellipse 70% 60% at 85% 20%, rgba(235, 0, 139, 0.1) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(212, 168, 83, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 40% at 50% -10%, rgba(112, 33, 177, 0.08) 0%, transparent 45%),
-    var(--background);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--accent) 100%);
+  color: #ffffff;
 }
 
 
@@ -121,7 +129,7 @@ body {
 
 .card:hover {
   box-shadow:
-    0 0 0 1px rgba(236, 72, 153, 0.1),
-    0 4px 24px rgba(26, 35, 64, 0.06);
+    0 0 0 1px rgba(124, 58, 237, 0.12),
+    0 4px 24px rgba(11, 19, 64, 0.08);
 }
 

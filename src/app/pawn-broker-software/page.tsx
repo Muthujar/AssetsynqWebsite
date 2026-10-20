@@ -4,7 +4,7 @@ import { LOCATIONS } from "@/lib/locations";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pawn Broker Software with Interest & Reports | AssetSynq",
+  title: "Pawn Broker Software with Interest & Reports | AssetSynQ",
   description:
     "Pawn broker software for Indian pawn shops: pledge entry, customer records with ID proof, automatic interest, daily cash and overdue reports, multiple branches, and Excel export.",
   path: "/pawn-broker-software",
@@ -17,7 +17,7 @@ export default function PawnBrokerSoftwarePage() {
       title="Pawn broker software for the whole shop"
       lead="From the counter to closing time: pledge entry, customer records, interest, payments, reports, and branch cash, all in one system your staff can learn quickly."
       intro={[
-        "Pawn brokers juggle many jobs every day: taking new pledges, finding old customers, collecting interest, closing loans, and balancing the cash at night. AssetSynq puts each of these in one simple system, so the register book is no longer needed.",
+        "Pawn brokers juggle many jobs every day: taking new pledges, finding old customers, collecting interest, closing loans, and balancing the cash at night. AssetSynQ puts each of these in one simple system, so the register book is no longer needed.",
         "Owners get a live dashboard of active pledges, cash in hand, vault metals, and overdue loans across every branch, on the shop PC or on their phone.",
       ]}
       highlights={[

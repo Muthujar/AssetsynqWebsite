@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Noto_Sans_Tamil } from "next/font/google";
+import { Inter, Noto_Sans_Tamil } from "next/font/google";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_KEYWORDS,
@@ -9,10 +9,11 @@ import {
 } from "@/lib/seo";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+// Same typeface as the app.
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const notoSansTamil = Noto_Sans_Tamil({
@@ -66,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${notoSansTamil.variable} scroll-smooth`}
+      className={`${inter.variable} ${notoSansTamil.variable} scroll-smooth`}
     >
       <body className="min-h-screen antialiased">
         {children}

@@ -1,10 +1,10 @@
-﻿import { ImageResponse } from "next/og";
+import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { LOGO, PRODUCT_SCREENSHOTS } from "@/lib/brand";
 
 export const alt =
-  "AssetSynq: pawn shop software for Indian gold loan shops";
+  "AssetSynQ: pawn shop software for Indian gold loan shops";
 export const size = {
   width: 1200,
   height: 630,

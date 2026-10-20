@@ -7,16 +7,16 @@ export type FaqItem = {
 
 export const FAQS: FaqItem[] = [
   {
-    question: "Is AssetSynq suitable for small pawnshops?",
-    questionTa: "சிறிய pawn shop-களுக்கு AssetSynq ஏற்றதா?",
+    question: "Is AssetSynQ suitable for small pawnshops?",
+    questionTa: "சிறிய pawn shop-களுக்கு AssetSynQ ஏற்றதா?",
     answer:
       "Yes. It is built for small and medium pawn shops, especially owners moving from register books. We help with setup, training, and migrating your existing records.",
     answerTa:
       "ஆம். Register book-ல் இருந்து மாறும் சிறிய மற்றும் நடுத்தர pawn shop-களுக்காக இது உருவாக்கப்பட்டது. Setup, training, மற்றும் உள்ள records-ஐ migrate செய்ய நாங்கள் உதவுகிறோம்.",
   },
   {
-    question: "Can AssetSynq manage gold loan interest?",
-    questionTa: "Gold loan interest-ஐ AssetSynq கணக்கிடுமா?",
+    question: "Can AssetSynQ manage gold loan interest?",
+    questionTa: "Gold loan interest-ஐ AssetSynQ கணக்கிடுமா?",
     answer:
       "Yes. You set your scheme rules. Simple interest runs until expiry. After due date, penal interest compounds monthly as per your settings.",
     answerTa:

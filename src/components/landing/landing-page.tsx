@@ -64,23 +64,27 @@ export function LandingPage({
       />
       <Header />
       <main id="main">
-        <section className="relative overflow-hidden border-b border-border bg-hero">
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-brand-gradient"
+        <section className="relative overflow-hidden bg-hero">
+          <span
+            className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-gold-bright/90 lg:-right-24 lg:-top-24 lg:h-72 lg:w-72"
             aria-hidden="true"
           />
-          <div className="section-container py-12 sm:py-16">
-            <nav aria-label="Breadcrumb" className="text-xs text-muted">
+          <span
+            className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-white/10"
+            aria-hidden="true"
+          />
+          <div className="section-container relative py-12 sm:py-16">
+            <nav aria-label="Breadcrumb" className="text-xs text-white/70">
               <ol className="flex flex-wrap items-center gap-1.5">
                 {breadcrumbs.map((crumb, index) => (
                   <li key={crumb.path} className="flex items-center gap-1.5">
                     {index > 0 && <span aria-hidden="true">/</span>}
                     {index === breadcrumbs.length - 1 ? (
-                      <span aria-current="page" className="text-foreground">
+                      <span aria-current="page" className="font-medium text-white">
                         {crumb.name}
                       </span>
                     ) : (
-                      <Link href={crumb.path} className="hover:text-accent">
+                      <Link href={crumb.path} className="hover:text-gold-bright">
                         {crumb.name}
                       </Link>
                     )}
@@ -90,13 +94,13 @@ export function LandingPage({
             </nav>
 
             <div className="mt-8 max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-bright">
                 {eyebrow}
               </p>
-              <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                 {title}
               </h1>
-              <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
+              <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
                 {lead}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -109,7 +113,7 @@ export function LandingPage({
                 >
                   WhatsApp for Demo
                 </Button>
-                <Button href="#features" variant="secondary" size="lg">
+                <Button href="#features" variant="onDark" size="lg">
                   See features
                 </Button>
               </div>

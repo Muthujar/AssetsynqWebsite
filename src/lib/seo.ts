@@ -1,8 +1,8 @@
 export const SITE_URL = "https://www.assetsynq.com";
-export const SITE_NAME = "AssetSynq";
+export const SITE_NAME = "AssetSynQ";
 
 export const DEFAULT_TITLE =
-  "AssetSynq | Pawn shop software for Indian gold loan shops";
+  "AssetSynQ | Pawn shop software for Indian gold loan shops";
 
 export const DEFAULT_DESCRIPTION =
   "Run your pawn shop without the register book. Pledges, interest, and cash — Tamil and English. Setup and training included.";
@@ -15,7 +15,7 @@ export const DEFAULT_KEYWORDS = [
   "repledge software",
   "pawn software India",
   "Tamil pawn software",
-  "AssetSynq",
+  "AssetSynQ",
 ];
 
 /** Per-page metadata with its own canonical URL (the layout has none). */

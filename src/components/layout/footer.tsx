@@ -20,7 +20,7 @@ export function Footer() {
           <Link
             href="/"
             className="flex flex-col items-center gap-2 rounded-md outline-none ring-offset-4 ring-offset-dark focus-visible:ring-2 focus-visible:ring-accent sm:items-start"
-            aria-label="AssetSynq home"
+            aria-label="AssetSynQ home"
           >
             <span className="rounded-lg bg-white px-3 py-1.5">
               <Image
@@ -32,7 +32,7 @@ export function Footer() {
               />
             </span>
             <span className="text-center text-sm text-dark-muted sm:text-start">
-              © {new Date().getFullYear()} AssetSynq. All rights reserved.
+              © {new Date().getFullYear()} AssetSynQ. All rights reserved.
             </span>
           </Link>
 
@@ -44,7 +44,7 @@ export function Footer() {
                   href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors hover:text-gold-bright"
                 >
                   WhatsApp: {CONTACT.phoneDisplay}
                 </a>
@@ -52,7 +52,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${CONTACT.phoneTel}`}
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors hover:text-gold-bright"
                 >
                   Phone: {CONTACT.phoneDisplay}
                 </a>
@@ -60,7 +60,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors hover:text-gold-bright"
                 >
                   {CONTACT.email}
                 </a>
@@ -75,7 +75,7 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="transition-colors hover:text-accent"
+                    className="transition-colors hover:text-gold-bright"
                   >
                     {label}
                   </Link>

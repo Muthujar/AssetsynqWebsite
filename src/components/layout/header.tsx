@@ -50,7 +50,7 @@ export function Header() {
         <Link
           href="/"
           className="flex shrink-0 items-center"
-          aria-label="AssetSynq home"
+          aria-label="AssetSynQ home"
         >
           <Image
             src={LOGO.src}

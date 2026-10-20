@@ -32,7 +32,7 @@ export function Migration() {
       <div className="section-container">
         <SectionHeader
           title="Moving From Register Books?"
-          description="We help migrate your existing customer and pledge records into AssetSynq. No need to start from scratch."
+          description="We help migrate your existing customer and pledge records into AssetSynQ. No need to start from scratch."
         />
 
         <ul className="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-2">

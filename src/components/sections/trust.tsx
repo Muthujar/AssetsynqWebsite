@@ -21,7 +21,7 @@ export function Trust() {
     <section id="trust" className="border-y border-border bg-surface py-10 sm:py-12">
       <div className="section-container">
         <h2 className="text-center text-lg font-semibold text-foreground sm:text-xl">
-          Why Pawn Shops Trust AssetSynq
+          Why Pawn Shops Trust AssetSynQ
         </h2>
 
         <ul className="mx-auto mt-6 grid max-w-4xl gap-2 sm:grid-cols-2 lg:grid-cols-3">

@@ -16,7 +16,7 @@ export function whatsappUrl(text?: string): string {
 }
 
 export const DEFAULT_WHATSAPP_MESSAGE =
-  "Hi, I'd like a demo of AssetSynq for my pawn shop.";
+  "Hi, I'd like a demo of AssetSynQ for my pawn shop.";
 
 export function buildEnquiryWhatsAppMessage(data: {
   name: string;
@@ -27,7 +27,7 @@ export function buildEnquiryWhatsAppMessage(data: {
   message?: string;
 }): string {
   const lines = [
-    "AssetSynq enquiry",
+    "AssetSynQ enquiry",
     "",
     `Name: ${data.name}`,
     `Shop: ${data.business}`,

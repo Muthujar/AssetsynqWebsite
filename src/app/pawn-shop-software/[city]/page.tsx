@@ -17,7 +17,7 @@ export async function generateMetadata({
   const location = getLocation(city);
   if (!location) return {};
   return pageMetadata({
-    title: `Pawn Shop & Gold Loan Software in ${location.name} | AssetSynq`,
+    title: `Pawn Shop & Gold Loan Software in ${location.name} | AssetSynQ`,
     description: `Pawn broking software for gold loan shops in ${location.name} and ${location.nearby.slice(0, 3).join(", ")}. Pledges, interest, repledge, and daily cash on phone or PC. Setup and training included.`,
     path: `/pawn-shop-software/${location.slug}`,
   });

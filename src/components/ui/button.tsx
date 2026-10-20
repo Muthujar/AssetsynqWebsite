@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "gold" | "whatsapp";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "gold" | "whatsapp" | "onDark";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -18,12 +18,15 @@ const variants: Record<ButtonVariant, string> = {
   gold: "bg-gold text-foreground font-semibold shadow-md shadow-gold/25 hover:bg-gold-hover",
   whatsapp:
     "bg-[#25D366] text-white shadow-lg shadow-[#25D366]/30 hover:bg-[#20BD5A]",
+  /** Outline button for the navy → violet hero panels. */
+  onDark:
+    "border border-white/40 bg-white/10 text-white hover:border-white/70 hover:bg-white/20",
 };
 
 const sizes: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm",
-  md: "px-5 py-2.5 text-sm font-medium",
-  lg: "px-6 py-3 text-base font-medium",
+  md: "px-5 py-2.5 text-sm font-semibold",
+  lg: "px-6 py-3 text-base font-semibold",
 };
 
 export function Button({

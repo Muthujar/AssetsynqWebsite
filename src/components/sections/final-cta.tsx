@@ -3,10 +3,18 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/contact";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-brand-gradient py-12 sm:py-16">
+    <section className="relative overflow-hidden bg-hero py-12 sm:py-16">
+      <span
+        className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-gold-bright/90 lg:-right-20 lg:-top-20 lg:h-56 lg:w-56"
+        aria-hidden="true"
+      />
+      <span
+        className="pointer-events-none absolute -bottom-28 -left-16 h-64 w-64 rounded-full bg-white/10"
+        aria-hidden="true"
+      />
       <div className="section-container relative text-center">
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-          Ready to try AssetSynq?
+        <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          Ready to try AssetSynQ?
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-white/85">
           Message us on WhatsApp. We will show you a demo and set up your shop
@@ -24,9 +32,8 @@ export function FinalCTA() {
           </Button>
           <Button
             href="#contact"
-            variant="secondary"
+            variant="onDark"
             size="lg"
-            className="border-white/30 bg-white/10 text-white hover:bg-white/20"
           >
             Send enquiry
           </Button>

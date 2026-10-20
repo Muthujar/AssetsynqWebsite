@@ -66,7 +66,7 @@ export function FAQ() {
                       {isTamil ? questionTa : question}
                     </span>
                     <span
-                      className="shrink-0 text-accent transition-transform group-open:rotate-45"
+                      className="shrink-0 text-gold-bright transition-transform group-open:rotate-45"
                       aria-hidden="true"
                     >
                       +

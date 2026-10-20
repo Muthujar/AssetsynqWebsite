@@ -43,8 +43,8 @@ export function HorizontalFeatureRow({
   description: string;
 }) {
   return (
-    <article className="group flex gap-4 rounded-xl border border-border bg-surface p-4 shadow-sm transition-shadow hover:shadow-md hover:ring-1 hover:ring-accent/10 sm:p-5">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-sm shadow-accent/15">
+    <article className="group flex gap-4 rounded-xl border border-border bg-gradient-to-br from-accent/5 via-surface to-surface p-4 shadow-sm transition-shadow hover:shadow-md sm:p-5">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-md shadow-accent/30">
         <Icon className="h-5 w-5" aria-hidden="true" />
       </div>
       <div className="min-w-0 flex-1">

@@ -4,7 +4,7 @@ import { LOCATIONS } from "@/lib/locations";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gold Loan Software for Pawn Shops & Jewellers | AssetSynq",
+  title: "Gold Loan Software for Pawn Shops & Jewellers | AssetSynQ",
   description:
     "Gold loan software that calculates interest, tracks pledged gold and silver, handles part payments, renewals and auctions, and shows daily cash. Cloud-based, on phone or PC.",
   path: "/gold-loan-software",
@@ -15,9 +15,9 @@ export default function GoldLoanSoftwarePage() {
     <LandingPage
       eyebrow="Gold loan software"
       title="Gold loan software that does the interest for you"
-      lead="Create gold loans quickly, let AssetSynq calculate simple and penal interest, and see every pledged item, payment, and rupee of cash in one place."
+      lead="Create gold loans quickly, let AssetSynQ calculate simple and penal interest, and see every pledged item, payment, and rupee of cash in one place."
       intro={[
-        "A gold loan business lives on accurate interest and safe custody of pledged jewels. AssetSynq records each gold loan with its scheme, item weights, and photos, then calculates interest according to your rules.",
+        "A gold loan business lives on accurate interest and safe custody of pledged jewels. AssetSynQ records each gold loan with its scheme, item weights, and photos, then calculates interest according to your rules.",
         "Simple interest runs until the due date. After that, penal interest is applied monthly as per your settings. Part payments of interest or principal, renewals, and closures update the balance automatically, so your staff never have to work it out by hand.",
       ]}
       highlights={[
@@ -47,7 +47,7 @@ export default function GoldLoanSoftwarePage() {
         {
           question: "Do I need to install anything?",
           answer:
-            "No. AssetSynq runs in the browser on PC and phone, with cloud backup included.",
+            "No. AssetSynQ runs in the browser on PC and phone, with cloud backup included.",
         },
       ]}
       breadcrumbs={[

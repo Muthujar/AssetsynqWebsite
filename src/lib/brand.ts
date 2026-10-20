@@ -1,7 +1,7 @@
 /** Main logo — change sizes here to scale across header and footer. */
 export const LOGO = {
   src: "/logo-assetsynq.png",
-  alt: "AssetSynq",
+  alt: "AssetSynQ",
   header: {
     width: 220,
     height: 45,
@@ -18,7 +18,7 @@ export const LOGO = {
 export const PRODUCT_SCREENSHOTS = {
   dashboard: {
     src: "/dashboard-gold-finance.png",
-    alt: "AssetSynq gold finance dashboard with pledges, cash, vault, and performance charts",
+    alt: "AssetSynQ gold finance dashboard with pledges, cash, vault, and performance charts",
     width: 1024,
     height: 467,
   },

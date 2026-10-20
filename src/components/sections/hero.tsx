@@ -16,16 +16,7 @@ function HeroVisual() {
 
   return (
     <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
-      <div
-        className="pointer-events-none absolute -right-8 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-brand-gradient opacity-20 blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -left-6 bottom-0 h-40 w-40 rounded-full bg-gold/25 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-xl shadow-accent/10 ring-1 ring-gold/15">
+      <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-surface shadow-2xl shadow-black/30">
         <div className="flex items-center gap-2 border-b border-border bg-background/80 px-4 py-3">
           <div className="flex gap-1.5" aria-hidden="true">
             <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
@@ -33,7 +24,7 @@ function HeroVisual() {
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
           </div>
           <p className="mx-auto truncate text-xs font-medium text-muted">
-            AssetSynq — today at the shop
+            AssetSynQ — today at the shop
           </p>
         </div>
 
@@ -66,24 +57,29 @@ function HeroVisual() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-hero">
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-brand-gradient"
+    <section className="relative overflow-hidden bg-hero">
+      {/* Accent circles from the app's sign-in panel. */}
+      <span
+        className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-gold-bright/90 lg:-right-24 lg:-top-24 lg:h-72 lg:w-72"
+        aria-hidden="true"
+      />
+      <span
+        className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-white/10"
         aria-hidden="true"
       />
 
-      <div className="section-container py-14 sm:py-20 lg:py-24">
+      <div className="section-container relative py-14 sm:py-20 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Copy */}
           <div className="text-center lg:text-left">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-bright">
               Pawn shop software
             </p>
-            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
+            <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
               Run your pawn shop without the{" "}
-              <span className="text-gradient">register book</span>
+              <span className="text-gold-bright">register book</span>
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
+            <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
               New pledge, take payment, close jewels — on phone or PC. Tamil
               and English. We set up your shop.
             </p>
@@ -98,7 +94,7 @@ export function Hero() {
               >
                 WhatsApp for Demo
               </Button>
-              <Button href="#migration" variant="secondary" size="lg">
+              <Button href="#migration" variant="onDark" size="lg">
                 See how it works
               </Button>
             </div>
@@ -107,9 +103,9 @@ export function Hero() {
               {trustPills.map(({ icon: Icon, label }) => (
                 <li
                   key={label}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground shadow-sm"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium text-white"
                 >
-                  <Icon className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+                  <Icon className="h-3.5 w-3.5 text-gold-bright" aria-hidden="true" />
                   {label}
                 </li>
               ))}
